@@ -12,7 +12,7 @@ pool: Default
 steps:
 - task: octane-start-task@2
   inputs:
-    OctaneServiceConnection: 'connectionAzure'
+    OctaneServiceConnection: 'AzureAM'
     WorkspaceList: '1007'
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
@@ -23,5 +23,5 @@ steps:
   displayName: 'Run a multi-line script'
 - task: octane-end-task@2
   inputs:
-    OctaneServiceConnection: 'connectionAzure'
+    OctaneServiceConnection: 'AzureAM'
     WorkspaceList: '1007'
