@@ -13,7 +13,7 @@ steps:
 - task: octane-start-task-private@1
   inputs:
     OctaneServiceConnection: 'connectionAzure'
-    WorkspaceList: '1002'
+    WorkspaceList: '1007'
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
@@ -24,4 +24,4 @@ steps:
 - task: octane-end-task-private@1
   inputs:
     OctaneServiceConnection: 'connectionAzure'
-    WorkspaceList: '1002'
+    WorkspaceList: '1007'
