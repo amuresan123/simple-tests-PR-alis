@@ -36,4 +36,3 @@ steps:
     OctaneServiceConnection: 'AMAzure'
     WorkspaceList: '1003'
     # Starter pipeline
-    
