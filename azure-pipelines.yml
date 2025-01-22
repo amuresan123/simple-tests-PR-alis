@@ -10,7 +10,7 @@ pool: Default
 steps:
 - task: octane-start-task@2
   inputs:
-    OctaneServiceConnection: 'AzureAM'
+    OctaneServiceConnection: 'AMAzure'
     WorkspaceList: '1003'
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
@@ -33,6 +33,6 @@ steps:
     sonarQubeRunAnalysis: false
 - task: octane-end-task@2
   inputs:
-    OctaneServiceConnection: 'AzureAM'
+    OctaneServiceConnection: 'AMAzure'
     WorkspaceList: '1003'
     # Starter pipeline
