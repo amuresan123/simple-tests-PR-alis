@@ -8,10 +8,6 @@ trigger:
 pool: Default
 
 steps:
-- task: octane-start-task@2
-  inputs:
-    OctaneServiceConnection: 'ALMOctane'
-    WorkspaceList: '1039'
 - task: octane-start-task-private@1
   condition: always()
   inputs:
@@ -37,14 +33,9 @@ steps:
     mavenAuthenticateFeed: false
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
-- task: octane-end-task@2
+- task: octane-end-task-private@1
+  condition: always()
   inputs:
-    OctaneServiceConnection: 'ALMOctane'
-    WorkspaceList: '1039'
-    # Starter pipeline
-    - task: octane-end-task-private@1
-    condition: always()
-      inputs:
         OctaneServiceConnection: 'ALMOctane'
         WorkspaceList: '1039'
         CreatePipelineCheckbox: true
