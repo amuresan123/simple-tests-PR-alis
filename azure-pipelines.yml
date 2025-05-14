@@ -10,8 +10,14 @@ pool: Default
 steps:
 - task: octane-start-task@2
   inputs:
-    OctaneServiceConnection: 'AMAzure'
-    WorkspaceList: '1004'
+    OctaneServiceConnection: 'ALMOctane'
+    WorkspaceList: '1039'
+- task: octane-start-task-private@1
+  condition: always()
+  inputs:
+    OctaneServiceConnection: 'ALMOctane'
+    WorkspaceList: '1039'
+    CreatePipelineCheckbox: true
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
@@ -33,6 +39,12 @@ steps:
     sonarQubeRunAnalysis: false
 - task: octane-end-task@2
   inputs:
-    OctaneServiceConnection: 'AMAzure'
-    WorkspaceList: '1004'
+    OctaneServiceConnection: 'ALMOctane'
+    WorkspaceList: '1039'
     # Starter pipeline
+    - task: octane-end-task-private@1
+    condition: always()
+      inputs:
+        OctaneServiceConnection: 'ALMOctane'
+        WorkspaceList: '1039'
+        CreatePipelineCheckbox: true
