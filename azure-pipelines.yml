@@ -12,6 +12,7 @@ steps:
   condition: always()
   inputs:
     OctaneServiceConnection: 'ALMOctane'
+    RunPipelineWithParameters: false
     WorkspaceList: '2008'
     CreatePipelineCheckbox: true
 - script: echo Hello, world!
@@ -37,5 +38,6 @@ steps:
   condition: always()
   inputs:
         OctaneServiceConnection: 'ALMOctane'
+        RunPipelineWithParameters: false
         WorkspaceList: '2008'
         CreatePipelineCheckbox: true
