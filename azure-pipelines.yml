@@ -8,11 +8,9 @@ trigger:
 pool: Default
 
 steps:
-- task: octane-start-task-private@1
-  condition: always()
+- task: octane-start-task@2
   inputs:
-    OctaneServiceConnection: 'ALMOctane'
-    RunPipelineWithParameters: false
+    OctaneServiceConnection: 'AMAzure'
     WorkspaceList: '16002'
     CreatePipelineCheckbox: true
 - script: echo Hello, world!
@@ -34,10 +32,7 @@ steps:
     mavenAuthenticateFeed: false
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
-- task: octane-end-task-private@1
-  condition: always()
+- task: octane-end-task@2
   inputs:
-        OctaneServiceConnection: 'ALMOctane'
-        RunPipelineWithParameters: false
-        WorkspaceList: '16002'
-        CreatePipelineCheckbox: true
+    OctaneServiceConnection: 'AMAzure'
+    WorkspaceList: '16002'
