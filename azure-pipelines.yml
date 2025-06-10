@@ -13,7 +13,7 @@ steps:
   inputs:
     OctaneServiceConnection: 'ALMOctane'
     RunPipelineWithParameters: false
-    WorkspaceList: '2008'
+    WorkspaceList: '16002'
     CreatePipelineCheckbox: true
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
@@ -39,5 +39,5 @@ steps:
   inputs:
         OctaneServiceConnection: 'ALMOctane'
         RunPipelineWithParameters: false
-        WorkspaceList: '2008'
+        WorkspaceList: '16002'
         CreatePipelineCheckbox: true
