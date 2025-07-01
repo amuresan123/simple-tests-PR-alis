@@ -11,7 +11,7 @@ steps:
 - task: octane-start-task@2
   inputs:
     OctaneServiceConnection: 'AMAzure'
-    WorkspaceList: '60003'
+    WorkspaceList: '38001'
     CreatePipelineCheckbox: true
 
 - script: echo Hello, world!
@@ -36,4 +36,4 @@ steps:
 - task: octane-end-task@2
   inputs:
     OctaneServiceConnection: 'AMAzure'
-    WorkspaceList: '60003'
+    WorkspaceList: '38001'
